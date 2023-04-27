@@ -1,0 +1,149 @@
+.header {
+  box-shadow: (0px 2px 12px rgba(0, 0, 0, 0.06));
+  width: 100%;
+  padding: 11px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $light-color;
+  z-index: 11;
+
+  &__hamburger {
+    height: 2px;
+    width: 100%;
+    background-color: $light-text-color;
+    &:before, &:after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: $light-text-color;
+      position: absolute;
+    }
+    &:before {
+      top: 0;
+      left: 0;
+    }
+    &:after {
+      bottom: 0;
+      left: 0;
+    }
+    &-wrap {
+      width: 22px;
+      height: 16px;
+      margin-right: 15px;
+      position: relative;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 146px;
+    min-width: 146px;
+    &-wrap {
+      margin-right: 74px;
+      padding: 8px 10px;
+      @media (min-width: 992px) {
+        padding: 0;
+      }
+    }
+  }
+
+  &__nav {
+    width: 100%;
+    transform: translateY(-100%);
+    height: 0;
+    overflow: hidden;
+    @media (min-width: 992px) {
+      padding: 0;
+      transform: translateY(0);
+      height: auto;
+    }
+    &.active {
+      padding: 0;
+      transform: translateY(0);
+      height: auto;
+    }
+  }
+
+  &__main {
+    &-nav {
+      padding-top: 30px;
+      margin-bottom: 20px;
+      @media (min-width: 992px) {
+        margin-bottom: 0;
+        padding-top: 0;
+      }
+    }
+    &-item {
+      margin-bottom: 10px;
+      @media (min-width: 992px) {
+        margin-right: 15px;
+        margin-bottom: 0;
+      }
+      @media (min-width: 1200px) {
+        margin-right: 28px;
+      }
+      @media (min-width: 1400px) {
+        margin-right: 32px;
+        &:nth-of-type(2) {
+          min-width: 85px;
+        }
+      }
+      &:last-of-type {
+        a {
+          color: $orange-color
+        }
+      }
+    }
+    &-link {
+      @include page-text($normal-font, $main-color, 18, 1);
+      @media (min-width: 992px) {
+        font-size: 14px;
+      }
+      @media (min-width: 1400px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__sec {
+    &-nav {
+      padding-bottom: 30px;
+      @media (min-width: 992px) {
+        padding-bottom: 0;
+      }
+    }
+    &-item {
+      margin-bottom: 10px;
+      @media (min-width: 992px) {
+        margin-right: 14px;
+        margin-bottom: 0;
+      }
+      @media (min-width: 1200px) {
+        margin-right: 26px;
+      }
+      @media (min-width: 1400px) {
+        margin-right: 32px;
+      }
+    }
+    &-link {
+      @include page-text($normal-font, $light-text-color, 16, 1);
+      @media (min-width: 992px) {
+        font-size: 12px;
+      }
+      @media (min-width: 1400px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__cart {
+    width: 100%;
+    min-width: 20px;
+    &-wrap {
+      width: 100%;
+      max-width: 28px;
+    }
+  }
+}

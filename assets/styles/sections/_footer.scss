@@ -1,0 +1,20 @@
+.footer {
+  background: $navy-color;
+  padding: 64px 0;
+  &__icon {
+    width: 100%;
+    &-wrap {
+      width: 100%;
+      max-width: 24px;
+      margin-bottom: 10px;
+    }
+  }
+  &__text {
+    @include page-text($normal-font, $light-gray, 14, 1);
+    font-weight: 600;
+    &--normal {
+      margin-top: 26px;
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.bundle {
+  padding: 100px 0 80px;
+  background: $light-blue;
+  &__img {
+    width: 100%;
+    max-width: 540px;
+  }
+  &__content {
+    padding-left: 40px;
+    @media (min-width: 1400px) {
+      padding-left: 0;
+    }
+  }
+  &__title {
+    @include page-text($normal-font, $dark-text-color, 40, 1.2);
+    width: 100%;
+    max-width: 448px;
+    margin-bottom: 27px;
+    span {
+      color: $main-color;
+    }
+  }
+  &__item {
+    @include page-text($normal-font, $light-text-color, 16, 1.2);
+    margin-bottom: 15px;
+    padding-left: 28px;
+    position: relative;
+    &:before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      left: 0;
+      top: 3px;
+      background: url('./assets/img/check.svg');
+    }
+  }
+  &__button {
+    @include page-text($normal-font, $light-color, 16, 1);
+    padding: 19px 38px;
+    background: $main-color;
+    border-radius: 50px;
+    border: none;
+    margin-top: 45px;
+    transition: transform .25s;
+    &:hover {
+      transform: scale(105%);
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@mixin page-text($font: $normal-font, $text-color: $dark-text-color, $font-size: 16, $line-height: 1.5) {
+  font-family: $font;
+  color: $text-color;
+  font-size: $font-size + px;
+  line-height: $line-height;
+}

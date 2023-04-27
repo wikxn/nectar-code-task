@@ -1,0 +1,157 @@
+.banner {
+  padding-bottom: 15px;
+  @media (min-width: 992px) {
+    padding: 22px 0 30px;
+  }
+  &__info {
+    padding: 0 15px;
+    @media (min-width: 992px) {
+      padding: 10px 25px;
+    }
+  }
+  &__img {
+    width: 100%;
+  }
+  &__title {
+    @include page-text($normal-font, $dark-text-color, 20, 1.2);
+    margin: 20px 0 15px;
+    @media(min-width: 992px) {
+      font-size: 23px;
+    }
+  }
+  &__price {
+    @include page-text($normal-font, $main-color, 18, 1);
+    span {
+      @include page-text($normal-font, $red-color, 12, 1);
+      margin-right: 14px;
+    }
+  }
+  &__list {
+    margin: 15px 0 12px;
+    @media (min-width: 992px) {
+      margin: 26px 0 14px;
+    }
+  }
+  &__item {
+    @include page-text($normal-font, $green-color, 14, 1.2);
+    position: relative;
+    margin-bottom: 8px;
+    padding-left: 27px;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 17px;
+      height: 12px;
+      background: url('./assets/img/green-check.svg');
+    }
+  }
+  &__button {
+    @include page-text($normal-font, $light-color, 18, 1);
+    width: 100%;
+    background: $main-color;
+    padding: 18px 0;
+    border: none;
+    border-radius: 8px;
+    transition: transform .25s;
+    &:hover {
+      transform: scale(105%)
+    }
+  }
+  &__header {
+    @include page-text($normal-font, $dark-text-color, 16, 1.2);
+    text-align: center;
+    margin: 50px 0 25px;
+    &--prod {
+      @media (min-width: 992px) {
+        margin-top: 12px;
+      }
+    }
+  }
+  &__table {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 380px;
+    max-height: 254px;
+  }
+  &__product {
+    width: 100%;
+    max-width: 167px;
+  }
+  &__desc {
+    @include page-text($normal-font, $dark-text-color, 12, 1.2);
+    margin: 8px 0 4px;
+  }
+  &__cost {
+    @include page-text($normal-font, $main-color, 10, 1);
+  }
+  
+  #image-slider {
+    .splide {
+      width: 100%;
+      max-width: 720px;
+      &__slide {
+        max-height: 540px;
+        width: 100%;
+        @media (min-width: 776px) {
+          border-radius: 8px;
+          overflow: hidden;
+        }
+      }
+      &__pagination {
+        bottom: 12px;
+        &__page {
+          border: 2px solid $light-color;
+          background: transparent;
+          width: 10px;
+          height: 10px;
+          &.is-active {
+            background: $light-color;
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+
+  #products-slider {
+    .splide {
+      width: 100%;
+      &__slide {
+        border: 1px solid $lightest-blue;
+        width: 100%;
+        padding: 11px 7px;
+        border-radius: 8px;
+        max-width: 180px;
+      }
+      &__arrow {
+        background-color: $main-color;
+        opacity: 1;
+        svg {
+          fill: $light-color;
+        }
+        &:disabled {
+          display: none;
+        }
+      }
+    }
+  }
+
+  #thumbnail-slider {
+    margin-top: 21px;
+    .splide {
+      &__slide {
+        border-radius: 8px;
+        overflow: hidden;
+        &.is-active {
+          border: 2px solid $main-color;
+        }
+        .splide__slide img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
